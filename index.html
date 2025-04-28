@@ -97,10 +97,29 @@
             overflow: hidden;
         }
         
-        .skill-level span {
+        /* Different colors for each skill category */
+        .programming-level span {
             display: block;
             height: 100%;
-            background-color: #3498db;
+            background-color: #3498db; /* Blue */
+        }
+        
+        .engineering-level span {
+            display: block;
+            height: 100%;
+            background-color: #2ecc71; /* Green */
+        }
+        
+        .analysis-level span {
+            display: block;
+            height: 100%;
+            background-color: #e74c3c; /* Red */
+        }
+        
+        .database-level span {
+            display: block;
+            height: 100%;
+            background-color: #9b59b6; /* Purple */
         }
         
         .project {
@@ -146,7 +165,7 @@
 
         <section>
             <h2>Summary</h2>
-            <p>Results-driven Data Analyst and Engineer with [X] years of experience transforming complex datasets into actionable insights. Expertise in data pipeline development, statistical analysis, and machine learning. Passionate about solving business problems through data-driven decision making.</p>
+            <p>Results-driven Data Analyst and Engineer with [X] years of experience transforming complex datasets into actionable insights. Passionate about solving business problems through data-driven decision making.</p>
         </section>
 
         <section>
@@ -155,41 +174,41 @@
                 <div class="skill-category">
                     <h3>Programming & Tools</h3>
                     <ul class="skill-list">
-                        <li>Python <div class="skill-level"><span style="width: 95%"></span></div></li>
-                        <li>SQL <div class="skill-level"><span style="width: 90%"></span></div></li>
-                        <li>R <div class="skill-level"><span style="width: 80%"></span></div></li>
-                        <li>Spark <div class="skill-level"><span style="width: 75%"></span></div></li>
-                        <li>Tableau/Power BI <div class="skill-level"><span style="width: 85%"></span></div></li>
+                        <li>Python <div class="skill-level programming-level"><span style="width: 5%"></span></div></li>
+                        <li>SQL <div class="skill-level programming-level"><span style="width: 90%"></span></div></li>
+                        <li>R <div class="skill-level programming-level"><span style="width: 0%"></span></div></li>
+                        <li>Spark <div class="skill-level programming-level"><span style="width: 0%"></span></div></li>
+                        <li>Power BI <div class="skill-level programming-level"><span style="width: 95%"></span></div></li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Engineering & Infrastructure</h3>
                     <ul class="skill-list">
-                        <li>ETL Pipeline Development <div class="skill-level"><span style="width: 90%"></span></div></li>
-                        <li>AWS/Azure/GCP <div class="skill-level"><span style="width: 80%"></span></div></li>
-                        <li>Hadoop Ecosystem <div class="skill-level"><span style="width: 70%"></span></div></li>
-                        <li>Docker & Kubernetes <div class="skill-level"><span style="width: 75%"></span></div></li>
-                        <li>CI/CD <div class="skill-level"><span style="width: 65%"></span></div></li>
+                        <li>ETL Pipeline Development <div class="skill-level engineering-level"><span style="width: 90%"></span></div></li>
+                        <li>Azure <div class="skill-level engineering-level"><span style="width: 80%"></span></div></li>
+                        <li>Hadoop Ecosystem <div class="skill-level engineering-level"><span style="width: 0%"></span></div></li>
+                        <li>Docker & Kubernetes <div class="skill-level engineering-level"><span style="width: 5%"></span></div></li>
+                        <li>CI/CD <div class="skill-level engineering-level"><span style="width: 65%"></span></div></li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Analysis & Modeling</h3>
                     <ul class="skill-list">
-                        <li>Statistical Analysis <div class="skill-level"><span style="width: 85%"></span></div></li>
-                        <li>Machine Learning <div class="skill-level"><span style="width: 80%"></span></div></li>
-                        <li>A/B Testing <div class="skill-level"><span style="width: 90%"></span></div></li>
-                        <li>Predictive Modeling <div class="skill-level"><span style="width: 75%"></span></div></li>
-                        <li>Data Mining <div class="skill-level"><span style="width: 85%"></span></div></li>
+                        <li>Statistical Analysis <div class="skill-level analysis-level"><span style="width: 85%"></span></div></li>
+                        <li>Machine Learning <div class="skill-level analysis-level"><span style="width: 80%"></span></div></li>
+                        <li>A/B Testing <div class="skill-level analysis-level"><span style="width: 90%"></span></div></li>
+                        <li>Predictive Modeling <div class="skill-level analysis-level"><span style="width: 75%"></span></div></li>
+                        <li>Data Mining <div class="skill-level analysis-level"><span style="width: 85%"></span></div></li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Databases</h3>
                     <ul class="skill-list">
-                        <li>PostgreSQL <div class="skill-level"><span style="width: 90%"></span></div></li>
-                        <li>MySQL <div class="skill-level"><span style="width: 85%"></span></div></li>
-                        <li>MongoDB <div class="skill-level"><span style="width: 70%"></span></div></li>
-                        <li>Snowflake <div class="skill-level"><span style="width: 75%"></span></div></li>
-                        <li>Redshift <div class="skill-level"><span style="width: 80%"></span></div></li>
+                        <li>PostgreSQL <div class="skill-level database-level"><span style="width: 90%"></span></div></li>
+                        <li>MySQL <div class="skill-level database-level"><span style="width: 85%"></span></div></li>
+                        <li>MongoDB <div class="skill-level database-level"><span style="width: 70%"></span></div></li>
+                        <li>Snowflake <div class="skill-level database-level"><span style="width: 75%"></span></div></li>
+                        <li>Redshift <div class="skill-level database-level"><span style="width: 80%"></span></div></li>
                     </ul>
                 </div>
             </div>
@@ -250,8 +269,8 @@
             </div>
             
             <div class="project">
-                <div class="project-title">Predictive Maintenance System</div>
-                <p>Built machine learning model to predict equipment failures before they occur. Deployed model to production using Docker and AWS, reducing downtime by 35% and maintenance costs by $500K annually.</p>
+                <div class="project-title">Team Reporting System</div>
+                <p>Built Power Bi data model to gather data for EOM report. Previously the report was collated manually using Excel. Reduced workload for creating the report by 50% and saved 24 working days annually.</p>
             </div>
             
             <div class="project">
@@ -264,49 +283,28 @@
             <h2>Education</h2>
             
             <div class="education-item">
-                <div class="job-title">Master of Science in Data Science</div>
+                <div class="job-title">Higher National Diploma</div>
                 <div class="job-details">
-                    <span>University Name</span>
-                    <span>Year - Year</span>
+                    <span>Leeds Metropolitan University</span>
+                    <span>1998 - 2001</span>
                 </div>
-                <p>Relevant coursework: Machine Learning, Statistical Analysis, Big Data Technologies, Data Visualization</p>
+                
             </div>
             
-            <div class="education-item">
-                <div class="job-title">Bachelor of Science in Computer Science</div>
-                <div class="job-details">
-                    <span>University Name</span>
-                    <span>Year - Year</span>
-                </div>
-                <p>Relevant coursework: Algorithms, Database Systems, Software Engineering, Mathematics</p>
-            </div>
+            
         </section>
 
         <section>
             <h2>Certifications</h2>
             
             <div class="cert-item">
-                <div class="job-title">AWS Certified Data Analytics - Specialty</div>
-                <div class="job-details">
-                    <span>Amazon Web Services</span>
-                    <span>Year</span>
-                </div>
-            </div>
-            
-            <div class="cert-item">
-                <div class="job-title">Microsoft Certified: Azure Data Engineer Associate</div>
+                <div class="job-title">Microsoft Certified: Azure Data Fundamentals</div>
                 <div class="job-details">
                     <span>Microsoft</span>
-                    <span>Year</span>
+                    <span>2025</span>
                 </div>
             </div>
             
-            <div class="cert-item">
-                <div class="job-title">Google Professional Data Engineer</div>
-                <div class="job-details">
-                    <span>Google Cloud</span>
-                    <span>Year</span>
-                </div>
             </div>
         </section>
     </div>
