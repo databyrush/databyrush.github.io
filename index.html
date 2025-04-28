@@ -24,6 +24,9 @@
         
         header {
             margin-bottom: 30px;
+            background-color: #e8f4fc;
+            padding: 20px;
+            border-radius: 15px;
         }
         
         h1 {
@@ -82,9 +85,34 @@
         }
         
         .skill-list li {
-            margin-bottom: 5px;
+            margin-bottom: 12px;
+            padding: 10px 15px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
+        }
+        
+        /* Different background colors for each skill category */
+        .programming-skills li {
+            background-color: rgba(52, 152, 219, 0.1); /* Light Blue */
+        }
+        
+        .engineering-skills li {
+            background-color: rgba(46, 204, 113, 0.1); /* Light Green */
+        }
+        
+        .analysis-skills li {
+            background-color: rgba(231, 76, 60, 0.1); /* Light Red */
+        }
+        
+        .database-skills li {
+            background-color: rgba(155, 89, 182, 0.1); /* Light Purple */
+        }
+        
+        .skill-list li span {
+            margin-right: 10px; /* Add some space between skill name and indicator */
+            font-weight: 500;
         }
         
         .skill-level {
@@ -92,7 +120,6 @@
             width: 100px;
             height: 8px;
             background-color: #e0e0e0;
-            margin-left: 10px;
             border-radius: 4px;
             overflow: hidden;
         }
@@ -138,6 +165,38 @@
             margin-bottom: 10px;
         }
         
+        /* New styles for colored section panels */
+        section {
+            margin-bottom: 30px;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+        }
+        
+        section:nth-of-type(1) { /* Summary */
+            background-color: #e8f8f5;
+        }
+        
+        section:nth-of-type(2) { /* Skills */
+            background-color: #edfbf6;
+        }
+        
+        section:nth-of-type(3) { /* Experience */
+            background-color: #f4f6fb;
+        }
+        
+        section:nth-of-type(4) { /* Projects */
+            background-color: #f9ebf0;
+        }
+        
+        section:nth-of-type(5) { /* Education */
+            background-color: #f0f3fa;
+        }
+        
+        section:nth-of-type(6) { /* Certifications */
+            background-color: #e8f7fd;
+        }
+        
         @media (max-width: 600px) {
             .container {
                 padding: 20px;
@@ -145,6 +204,10 @@
             
             .skill-category {
                 width: 100%;
+            }
+            
+            section {
+                padding: 15px;
             }
         }
     </style>
@@ -173,42 +236,42 @@
             <div class="skills-container">
                 <div class="skill-category">
                     <h3>Programming & Tools</h3>
-                    <ul class="skill-list">
-                        <li>Python <div class="skill-level programming-level"><span style="width: 5%"></span></div></li>
-                        <li>SQL <div class="skill-level programming-level"><span style="width: 90%"></span></div></li>
-                        <li>R <div class="skill-level programming-level"><span style="width: 0%"></span></div></li>
-                        <li>Spark <div class="skill-level programming-level"><span style="width: 0%"></span></div></li>
-                        <li>Power BI <div class="skill-level programming-level"><span style="width: 95%"></span></div></li>
+                    <ul class="skill-list programming-skills">
+                        <li><span>Python</span> <div class="skill-level programming-level"><span style="width: 5%"></span></div></li>
+                        <li><span>SQL</span> <div class="skill-level programming-level"><span style="width: 90%"></span></div></li>
+                        <li><span>R</span> <div class="skill-level programming-level"><span style="width: 0%"></span></div></li>
+                        <li><span>Spark</span> <div class="skill-level programming-level"><span style="width: 0%"></span></div></li>
+                        <li><span>Power BI</span> <div class="skill-level programming-level"><span style="width: 95%"></span></div></li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Engineering & Infrastructure</h3>
-                    <ul class="skill-list">
-                        <li>ETL Pipeline Development <div class="skill-level engineering-level"><span style="width: 90%"></span></div></li>
-                        <li>Azure <div class="skill-level engineering-level"><span style="width: 80%"></span></div></li>
-                        <li>Hadoop Ecosystem <div class="skill-level engineering-level"><span style="width: 0%"></span></div></li>
-                        <li>Docker & Kubernetes <div class="skill-level engineering-level"><span style="width: 5%"></span></div></li>
-                        <li>CI/CD <div class="skill-level engineering-level"><span style="width: 65%"></span></div></li>
+                    <ul class="skill-list engineering-skills">
+                        <li><span>ETL Pipeline Development</span> <div class="skill-level engineering-level"><span style="width: 90%"></span></div></li>
+                        <li><span>Azure</span> <div class="skill-level engineering-level"><span style="width: 80%"></span></div></li>
+                        <li><span>Hadoop Ecosystem</span> <div class="skill-level engineering-level"><span style="width: 0%"></span></div></li>
+                        <li><span>Docker & Kubernetes</span> <div class="skill-level engineering-level"><span style="width: 5%"></span></div></li>
+                        <li><span>CI/CD</span> <div class="skill-level engineering-level"><span style="width: 65%"></span></div></li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Analysis & Modeling</h3>
-                    <ul class="skill-list">
-                        <li>Statistical Analysis <div class="skill-level analysis-level"><span style="width: 85%"></span></div></li>
-                        <li>Machine Learning <div class="skill-level analysis-level"><span style="width: 80%"></span></div></li>
-                        <li>A/B Testing <div class="skill-level analysis-level"><span style="width: 90%"></span></div></li>
-                        <li>Predictive Modeling <div class="skill-level analysis-level"><span style="width: 75%"></span></div></li>
-                        <li>Data Mining <div class="skill-level analysis-level"><span style="width: 85%"></span></div></li>
+                    <ul class="skill-list analysis-skills">
+                        <li><span>Statistical Analysis</span> <div class="skill-level analysis-level"><span style="width: 85%"></span></div></li>
+                        <li><span>Machine Learning</span> <div class="skill-level analysis-level"><span style="width: 80%"></span></div></li>
+                        <li><span>A/B Testing</span> <div class="skill-level analysis-level"><span style="width: 90%"></span></div></li>
+                        <li><span>Predictive Modeling</span> <div class="skill-level analysis-level"><span style="width: 75%"></span></div></li>
+                        <li><span>Data Mining</span> <div class="skill-level analysis-level"><span style="width: 85%"></span></div></li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Databases</h3>
-                    <ul class="skill-list">
-                        <li>PostgreSQL <div class="skill-level database-level"><span style="width: 90%"></span></div></li>
-                        <li>MySQL <div class="skill-level database-level"><span style="width: 85%"></span></div></li>
-                        <li>MongoDB <div class="skill-level database-level"><span style="width: 70%"></span></div></li>
-                        <li>Snowflake <div class="skill-level database-level"><span style="width: 75%"></span></div></li>
-                        <li>Redshift <div class="skill-level database-level"><span style="width: 80%"></span></div></li>
+                    <ul class="skill-list database-skills">
+                        <li><span>PostgreSQL</span> <div class="skill-level database-level"><span style="width: 90%"></span></div></li>
+                        <li><span>MySQL</span> <div class="skill-level database-level"><span style="width: 85%"></span></div></li>
+                        <li><span>MongoDB</span> <div class="skill-level database-level"><span style="width: 70%"></span></div></li>
+                        <li><span>Snowflake</span> <div class="skill-level database-level"><span style="width: 75%"></span></div></li>
+                        <li><span>Redshift</span> <div class="skill-level database-level"><span style="width: 80%"></span></div></li>
                     </ul>
                 </div>
             </div>
@@ -288,10 +351,7 @@
                     <span>Leeds Metropolitan University</span>
                     <span>1998 - 2001</span>
                 </div>
-                
             </div>
-            
-            
         </section>
 
         <section>
@@ -303,8 +363,6 @@
                     <span>Microsoft</span>
                     <span>2025</span>
                 </div>
-            </div>
-            
             </div>
         </section>
     </div>
