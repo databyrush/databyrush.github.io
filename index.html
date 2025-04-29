@@ -75,22 +75,21 @@
         }
         
         .skill-category {
-            width: 48%;
-            margin-bottom: 20px;
+            width: 49%;
+            margin-bottom: 10px;
         }
         
         .skill-list {
             list-style-type: none;
-            padding-left: 1;
+            padding-left: 0; /* Changed from 1 to 0 to ensure proper alignment */
         }
         
         .skill-list li {
             margin-bottom: 5px;
-            padding: 0px 5px;
-            border-radius: 1px;
+            padding: 10px 5px;
+            border-radius: 20px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
         }
         
         /* Different background colors for each skill category */
@@ -111,17 +110,19 @@
         }
         
         .skill-list li span {
-            margin-right: 10px; /* Add some space between skill name and indicator */
+            width: 150px;
+            flex: 1; /* Takes available space, pushing skill level to right */
             font-weight: 500;
         }
         
         .skill-level {
             display: inline-block;
-            width: 100px;
-            height: 8px;
+            width: 150px;
+            height: 16px;
             background-color: #e0e0e0;
             border-radius: 4px;
             overflow: hidden;
+            margin-left: 10px; /* Add some space between skill name and indicator */
         }
         
         /* Different colors for each skill category */
@@ -218,7 +219,7 @@
             <h1>James Rushworth</h1>
             <p>Data Analyst & Engineer</p>
             <div class="contact-info">
-                <div class="contact-item">📧 <a href=”mailto:james.rushworth@gmail.com” target=”_blank” rel=noopener noreferrer””>james.rushworth@gmail.com</a></div>
+                <div class="contact-item">📧 <a href="mailto:james.rushworth@gmail.com" target="_blank" rel=noopener noreferrer"">james.rushworth@gmail.com</a></div>
                 <div class="contact-item">📱 (+44) xxxxxxxx</div>
                 <div class="contact-item">🔗 <a href="https://linkedin.com/in/james-rushworth-data" target="_blank">linkedin.com/in/james-rushworth-data</a></div>
                 <div class="contact-item">💻 <a href="https://github.com/databyrush" target="_blank">github.com/databyrush</a></div>
